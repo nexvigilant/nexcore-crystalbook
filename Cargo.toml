@@ -1,0 +1,27 @@
+[package]
+name = "nexcore-crystalbook"
+version = "0.1.0"
+edition = "2024"
+authors = ["Matthew Campion, PharmD <matthew@nexvigilant.com>"]
+license = "LicenseRef-NexVigilant-Proprietary"
+repository = "https://github.com/nexvigilant/nexcore"
+rust-version = "1.85"
+description = "The Crystalbook — immutable, content-addressed scientific documents with Merkle integrity and cryptographic seal chains"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "crystalbook"
+path = "src/main.rs"
+
+[dependencies]
+nexcore-chrono = { workspace = true }
+nexcore-codec = { workspace = true }
+nexcore-hash = { workspace = true }
+nexcore-id = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+[lints]
+workspace = true
